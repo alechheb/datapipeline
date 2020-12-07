@@ -1,0 +1,13 @@
+repos:
+  - repo: https://github.com/ambv/black
+    rev: stable
+    hooks:
+      - id: black
+        lanquage_version: python3
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v1.2.3
+    hooks:
+      - id: trailing-whitespace
+      - id: no-commit-to-branch
+        args: [--branch, develop, --branch, master]
+      - id: check-merge-conflict
