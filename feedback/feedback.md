@@ -28,8 +28,8 @@ Il y aura 4 operators:
 
 Il y aura 3 operators:
 - DrugsOperator: Parse le fichier `drugs.csv` et passe le dataframe compressé via le XCOM (xcom_push) aux 2 tâches suivantes.
-- TrialsOperator: Parse le fichier `clinical_trials.csv` et passe le dataframe compressé via le XCOM (xcom_push) à la dernière tâche GraphOperator
-- PubmedOperator: Parse le fichier `pub_med.csv` et passe le dataframe compressé via le XCOM (xcom_push) à la dernière tâche GraphOperator
+- PubMedTrialsOperator: Parse le fichier `clinical_trials.csv` et passe le dataframe compressé via le XCOM (xcom_push) à la dernière tâche GraphOperator
+- PubMedTrialsOperator: Parse le fichier `pub_med.csv` et passe le dataframe compressé via le XCOM (xcom_push) à la dernière tâche GraphOperator
 - GraphOperator: Récupère les dataframes précédemment pushées (xcom_push from upstream tasks) et génère le graphe de liaison.
 
 * Note:
